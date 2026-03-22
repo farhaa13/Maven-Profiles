@@ -1,0 +1,34 @@
+# Added profiles for DEV,QA,Prod
+
+<profiles>
+  <!-- DEV -->
+  <profile>
+    <id>dev</id>
+    <properties>
+      <tomcat.url>http://65.2.141.215:8080/manager/text</tomcat.url>
+      <tomcat.username>admin</tomcat.username>
+      <tomcat.password>admin</tomcat.password>
+    </properties>
+  </profile>
+
+  <!-- QA -->
+  <profile>
+    <id>qa</id>
+    <properties>
+      <tomcat.url>http://52.66.207.33:8085/manager/text</tomcat.url>
+      <tomcat.username>admin</tomcat.username>
+      <tomcat.password>admin</tomcat.password>
+    </properties>
+  </profile>
+
+  <!-- PROD -->
+  <profile>
+    <id>prod</id>
+    <properties>
+      <tomcat.url>http://52.66.209.238:8090/manager/text</tomcat.url>
+      <tomcat.username>admin</tomcat.username>
+      <tomcat.password>admin</tomcat.password>
+    </properties>
+  </profile>
+
+</profiles>
