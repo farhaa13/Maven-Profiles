@@ -34,11 +34,11 @@ export PATH=$JAVA_HOME/bin:$M2_HOME/bin:$PATH]
 `source ~/.bash_profile`
 
 ### 6. Add user detail in tomcat-users.xml in all three servers
-[<role rolename="manager-gui"/>
- <role rolename="manager-script"/>
- <role rolename="manager-jmx"/>
- <role rolename="manager-status"/>
- <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>]
+ {role rolename="manager-gui"
+ role rolename="manager-script"
+ role rolename="manager-jmx"
+ role rolename="manager-status"
+ user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"}
  
 ### 7. Edit server.xml of tomcat
 add port according to your servers inside the connector port section 
@@ -65,11 +65,11 @@ add build profiles for Dev,QA,Prod environment
 `mvn tomcat7:deploy -Pdev`
 ![dev-deploy](https://github.com/user-attachments/assets/c55b4920-5876-485f-be80-1a0aa5a505e5)
 
-### 5. Deploy to QA
+### 15. Deploy to QA
 `mvn tomcat7:deploy -Pqa`
 ![QA-deploy](https://github.com/user-attachments/assets/d4f691fa-9c53-44a6-9b2f-a85aaf74de3c)
 
-### 6. Deploy to Prod
+### 16. Deploy to Prod
 `mvn tomcat7:deploy -Pprod`
 ![Prod-deploy](https://github.com/user-attachments/assets/ec305b1b-8941-45e9-9126-825e85468a46)
 
